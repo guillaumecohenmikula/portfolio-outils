@@ -50,6 +50,19 @@ Réponds en JSON avec:
 - "use_case": Cas d'usage principal
 - "cta": Appel à l'action
 Réponds UNIQUEMENT le JSON."""
+    },
+    "newsletter": {
+        "description": "Contenu newsletter structuré et engageant",
+        "system_prompt": """Tu es un expert en création de newsletters efficaces.
+Transforme cette description en newsletter structurée et professionnelle.
+Réponds UNIQUEMENT en JSON valide avec ces clés:
+- "subject": Ligne de sujet (max 60 caractères, doit donner envie d'ouvrir)
+- "preview": Preview text visible avant d'ouvrir (max 50 caractères)
+- "intro": Accroche chaleureuse et personnelle (2-3 lignes)
+- "main_content": Contenu principal avec insights (3-4 paragraphes)
+- "call_to_action": CTA clair et irrésistible
+- "signature": Signature chaleureuse de fermeture
+Réponds UNIQUEMENT le JSON."""
     }
 }
 
@@ -136,6 +149,7 @@ Exemples:
   python main.py --text "Mon app génère des rapports automatiques" --type linkedin
   python main.py --type twitter --text "Building in public avec l'IA"
   python main.py --type product_description --text "Tool d'automation des process métier"
+  python main.py --type newsletter --text "Les 5 tendances IA de 2026"
         """
     )
     
@@ -147,7 +161,7 @@ Exemples:
     parser.add_argument(
         '--type', '-T',
         default='linkedin',
-        choices=['linkedin', 'twitter', 'product_description'],
+        choices=['linkedin', 'twitter', 'product_description', 'newsletter'],
         help='Type de contenu à générer (défaut: linkedin)'
     )
     
