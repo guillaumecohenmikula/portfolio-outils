@@ -21,7 +21,7 @@ C'est pas un projet "fini". C'est un **stepping stone** (palier d'apprentissage)
 ### Installation
 ```bash
 # Clone le repo
-git clone https://github.com/guillaumecohenmikula-cpu/portfolio-outils.git
+git clone https://github.com/guillaumecohenmikula/portfolio-outils.git
 cd rep-03-premier-appel-ia
 
 # Crée l'environnement virtuel
